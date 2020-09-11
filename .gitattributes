@@ -13,10 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #===============================================================================
-
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text=auto
-
 # Explicitly declare text files you want to always be normalized and converted
 # to native line endings on checkout.
 *.BSD             text
@@ -37,13 +35,12 @@
 *.txt             text
 *.xml             text
 *.pump            text
-
 # Declare files that will always have OS specific line endings on checkout.
 *.vcxproj.user    text eol=crlf
 *.sh              text eol=lf
-
 # Denote all files that are truly binary and should not be modified.
 *.jpg             binary
 *.otf             binary
 *.png             binary
 *.woff            binary
+*.bin filter=lfs diff=lfs merge=lfs -text
